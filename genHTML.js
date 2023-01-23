@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+const generateHTML= (response)=>{
+    return `<!DOCTYPE html>
     <html lang="en">
         <head>
             <meta charset="UTF-8" />
@@ -12,16 +13,16 @@
                 <h1>My Portfolio</h1>
             </header>
             <main>
-                <h2>Justus:</h2>
-                <p>Here</p>
-                <p id="bio">I am a coder</p>
+                <h2>${response.name}:</h2>
+                <p>${response.location}</p>
+                <p id="bio">${response.bio}</p>
                 <p>
-                    LinkedIn:<a href="justus-1884848\" target="_blank">justus-1884848\</a>
+                    LinkedIn:<a href="${response.linkedin}" target="_blank">${response.linkedin}</a>
                 </p>
                 <p>
                     Github:
-                    <a href="https://github.com/brownj47" target="_blank"
-                        >brownj47</a
+                    <a href="https://github.com/${response.github}" target="_blank"
+                        >${response.github}</a
                     >
                 </p>
             </main>
@@ -29,4 +30,7 @@
                 <p>Made in 2023 using node.js</p>
             </footer>
         </body>
-    </html>
+    </html>`
+}
+
+module.exports = generateHTML
